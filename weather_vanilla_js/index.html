@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <title>Weather App: Vanilla Javascript</title>
+
+</head>
+
+<body>
+    <header>
+        <span class="show imperial" onClick="tempSymbols()">°C | °F</span>
+        <h1>What's the Weather?</h1>
+    </header>
+    <main>
+        <div class="current-location">
+            <p id="current-weather"></p>
+            <form>
+                <div class="inputWithIcon">
+                    <input type="text" placeholder="Search City" id="city-search">
+                    <!-- <i class="fa fa-search fa-lg fa-fw" aria-hidden="true"></i> -->
+                    <button id="submit" type="submit" value="Submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="today">
+            <div id="spinner"></div>
+            <div id="root"></div>
+        </div>
+    </main>
+</body>
+
+<script src="./index.js"></script>
+
+</html>

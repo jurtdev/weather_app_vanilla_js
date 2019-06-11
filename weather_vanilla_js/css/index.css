@@ -1,0 +1,294 @@
+body {
+    background-color: rgb(195, 247, 245);
+    font-family: 'Muli', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin-top: 40px;
+}
+
+.today {
+    margin: 0 auto;
+    background-color: rgb(249, 249, 249);
+    width: 30%;
+    height: 300px;
+    border-radius: 17px 17px;
+    box-shadow: 5px 5px 10px rgb(2, 2, 2);
+}
+
+.current-location {
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.current-location p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* input {
+    margin: 0 auto;
+    display: block;
+    height: 25px;
+    width: 200px;
+    padding-left: 5px;
+
+} */
+
+#root {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+/* Spinner */
+
+#spinner {
+    visibility: hidden;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(195, 247, 245);
+    border-top: 3px solid rgb(24, 113, 110);
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 310px auto;
+
+    /* margin: auto; */
+
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#spinner.show {
+    visibility: visible;
+}
+
+/* Input styling taken from https://codepen.io/zFunx/pen/XRyqvx */
+
+input[type="text"] {
+    width: 85%;
+    display: block;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px auto;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #f2640c;
+    box-shadow: 0 0 8px 0 #f2640c;
+
+}
+
+/* .inputWithIcon input[type="text"] {
+    padding-left: 40px;
+
+} */
+
+/* .inputWithIcon {
+    position: relative;
+
+} */
+
+/* .inputWithIcon i {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+} */
+/* 
+.inputWithIcon input[type="text"]:focus+i {
+    color: dodgerBlue;
+} */
+
+/* .inputWithIcon.inputIconBg i {
+    background-color: #aaa;
+    color: #fff;
+    padding: 9px 4px;
+    border-radius: 4px 0 0 4px;
+} */
+
+/* .inputWithIcon.inputIconBg input[type="text"]:focus+i {
+    color: #fff;
+    background-color: dodgerBlue;
+} */
+
+/* Symbol and text styling */
+
+
+.am,
+.pm {
+    font-weight: 700;
+    color: #f2640c;
+    margin-top: 10px;
+    font-size: 10px;
+    font-variant: small-caps;
+}
+
+button {
+    display: none;
+}
+
+.imperial,
+.metric {
+    display: none;
+    text-align: right;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+.big-temp {
+    display: inline-block;
+    margin-top: -5px;
+    margin-bottom: 0;
+    color: #f2640c;
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    font-size: 5em;
+}
+
+.degrees {
+    font-size: 20px;
+    color: #f2640c;
+}
+
+.kpa,
+.percent {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    color: #f2640c;
+}
+
+span.weather {
+    position: absolute;
+    display: block;
+    color: #f2640c;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 5px;
+    margin-left: 10px;
+
+}
+
+.weather-icon {
+    position: relative;
+    margin-right: 20px;
+    float: right;
+    align-content: flex-end;
+    width: 30%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .today {
+        margin: 0 auto;
+        background-color: rgb(249, 249, 249);
+        width: 60%;
+        height: 300px;
+        border-radius: 17px 17px;
+        box-shadow: 5px 5px 10px rgb(2, 2, 2);
+    }
+
+    input[type="text"] {
+        width: 85%;
+        display: block;
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        margin: 8px auto;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .today {
+        margin: 0 auto;
+        background-color: rgb(249, 249, 249);
+        width: 90%;
+        height: 300px;
+        border-radius: 17px 17px;
+        box-shadow: 5px 5px 10px rgb(2, 2, 2);
+    }
+
+    input[type="text"] {
+        width: 100%;
+        display: block;
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        margin: 8px auto;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+    }
+
+
+    .inputWithIcon {
+        display: inline-block;
+        width: 70%;
+    }
+
+    .current-location {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+table {
+    margin-top: 35px;
+    border: none;
+    width: 100%;
+}
+
+td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    border: none;
+    width: 50%;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.forecast {
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+    margin-top: 40px;
+    text-align: center;
+}
