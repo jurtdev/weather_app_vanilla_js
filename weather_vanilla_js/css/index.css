@@ -33,15 +33,6 @@ main {
     padding-bottom: 10px;
 }
 
-/* input {
-    margin: 0 auto;
-    display: block;
-    height: 25px;
-    width: 200px;
-    padding-left: 5px;
-
-} */
-
 #root {
     padding-left: 10px;
     padding-right: 10px;
@@ -64,9 +55,6 @@ main {
     left: 0;
     right: 0;
     margin: 310px auto;
-
-    /* margin: auto; */
-
     animation: spin 2s infinite linear;
 }
 
@@ -103,44 +91,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 8px 0 #f2640c;
 
 }
-
-/* .inputWithIcon input[type="text"] {
-    padding-left: 40px;
-
-} */
-
-/* .inputWithIcon {
-    position: relative;
-
-} */
-
-/* .inputWithIcon i {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    padding: 9px 8px;
-    color: #aaa;
-    transition: 0.3s;
-} */
-/* 
-.inputWithIcon input[type="text"]:focus+i {
-    color: dodgerBlue;
-} */
-
-/* .inputWithIcon.inputIconBg i {
-    background-color: #aaa;
-    color: #fff;
-    padding: 9px 4px;
-    border-radius: 4px 0 0 4px;
-} */
-
-/* .inputWithIcon.inputIconBg input[type="text"]:focus+i {
-    color: #fff;
-    background-color: dodgerBlue;
-} */
-
-/* Symbol and text styling */
-
 
 .am,
 .pm {
@@ -207,6 +157,31 @@ span.weather {
     width: 30%;
 }
 
+table {
+    margin-top: 35px;
+    border: none;
+    width: 100%;
+}
+
+td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    border: none;
+    width: 50%;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.forecast {
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+    margin-top: 40px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px) {
 
     .today {
@@ -266,29 +241,4 @@ span.weather {
         text-align: center;
         margin: 10px auto;
     }
-}
-
-table {
-    margin-top: 35px;
-    border: none;
-    width: 100%;
-}
-
-td {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 5px;
-    border: none;
-    width: 50%;
-}
-
-tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-.forecast {
-    font-family: 'Merriweather', serif;
-    text-decoration: underline;
-    margin-top: 40px;
-    text-align: center;
 }
