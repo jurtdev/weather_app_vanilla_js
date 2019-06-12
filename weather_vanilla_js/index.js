@@ -101,7 +101,7 @@ function loadData() {
                     let sunriseMinutes = "0" + sunriseDate.getMinutes();
                     let sunriseTime = sunriseHours + ":" + sunriseMinutes.substr(-2);
                     let sunsetDate = new Date(data.sys.sunset * 1000);
-                    let sunsetHours = sunsetDate.getHours();
+                    let sunsetHours = sunsetDate.getHours() - 12;
                     let sunsetMinutes = "0" + sunsetDate.getMinutes();
                     let sunsetTime = sunsetHours + ":" + sunsetMinutes.substr(-2);
 
